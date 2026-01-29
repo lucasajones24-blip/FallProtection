@@ -13,16 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '4.8'
-
-    - name: Restore dependencies
-      run: dotnet restore
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
 
     - name: Build Release x64
-      run: dotnet build --configuration Release --platform x64 --no-restore
+      run: msbuild SafeFallServer.csproj /p:Configuration=Release /p:Platform=x64
 
     - name: Upload DLL artifact
       uses: actions/upload-artifact@v4
