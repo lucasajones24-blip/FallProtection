@@ -16,6 +16,9 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
 
+    - name: Restore NuGet packages
+      run: nuget restore SafeFallServer.csproj
+
     - name: Build Release x64
       run: msbuild SafeFallServer.csproj /p:Configuration=Release /p:Platform=x64
 
