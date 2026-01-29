@@ -5,4 +5,22 @@
     <AssemblyName>SafeFallServer</AssemblyName>
     <RootNamespace>SafeFallServer</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>lib/Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>lib/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>lib/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>lib/BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>lib/0Harmony.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
